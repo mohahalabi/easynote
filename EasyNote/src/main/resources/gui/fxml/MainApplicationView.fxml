@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" styleClass="main-background" stylesheets="@../style/main_view_style.css"
+            xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ch.supsi.info.gruppo9.javafx.javafxcontrollers.JFXMainApplicationController">
+    <left>
+        <HBox fx:id="leftHBox" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <VBox alignment="CENTER" spacing="2.0">
+                    <children>
+                        <TextField fx:id="searchTextField" alignment="CENTER" onKeyTyped="#searchNote" prefHeight="30.0" prefWidth="180.0" promptText="Search a note" styleClass="search" stylesheets="@../style/main_view_style.css">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                        </TextField>
+                        <ListView fx:id="notesListView" prefWidth="240.0" styleClass="note-list" stylesheets="@../style/note_list_style.css" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+                <Separator orientation="VERTICAL">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Separator>
+            </children>
+        </HBox>
+    </left>
+    <top>
+        <VBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <MenuBar fx:id="menuBar" styleClass="main-background" stylesheets="@../style/main_view_style.css">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#closeTheApp" text="Exit" />
+                            </items>
+                        </Menu>
+                  <Menu mnemonicParsing="false" text="Search">
+                    <items>
+                        <RadioMenuItem mnemonicParsing="false" selected="true" text="By text">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="searchGroup" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" text="By tag" toggleGroup="$searchGroup" />
+                        <RadioMenuItem mnemonicParsing="false" text="By group tag" toggleGroup="$searchGroup" />
+                    </items>
+                  </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#aboutTheApp" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <HBox fx:id="topHBox" alignment="CENTER" spacing="10.0">
+                    <children>
+                        <Button fx:id="addNoteBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="20.0" mnemonicParsing="false" onAction="#addNewNote" prefHeight="40.0" prefWidth="40.0" styleClass="transparent-button" stylesheets="@../style/main_view_style.css" textAlignment="CENTER">
+                            <graphic>
+                                <ImageView fx:id="addNoteImageView1" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/newnote_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="New note">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                        </Button>
+                  <Region fx:id="topReducibleRegion" layoutX="290.0" layoutY="15.0" prefHeight="45.0" prefWidth="130.0" />
+                        <Button fx:id="closeListBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="11.0" mnemonicParsing="false" onAction="#closeNoteList" prefHeight="35.0" prefWidth="35.0" styleClass="transparent-button" stylesheets="@../style/main_view_style.css" textAlignment="CENTER">
+                            <graphic>
+                                <ImageView fx:id="hideNoteListImageView" fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/hide_list_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font size="1.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                     <tooltip>
+                        <Tooltip text="show/hide notes list">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                        </Button>
+                  <AnchorPane fx:id="notificationPane" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="notificationLabel" alignment="CENTER" layoutX="166.0" layoutY="9.0" prefHeight="35.0" prefWidth="564.0" stylesheets="@../style/notification_style.css" text="notification" textAlignment="CENTER" visible="false" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </AnchorPane>
+                        <Button fx:id="tagBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="355.0" layoutY="10.0" mnemonicParsing="false" onAction="#showTagView" prefHeight="40.0" prefWidth="40.0" styleClass="transparent-button" stylesheets="@../style/main_view_style.css" textAlignment="CENTER">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/tag_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                     <tooltip>
+                        <Tooltip text="show/hide tags panel">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="8.0" right="8.0" />
+                    </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+                </HBox>
+                <Separator valignment="BOTTOM" />
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox fx:id="centerHomeVBox" alignment="CENTER" prefHeight="650.0" prefWidth="1000.0" spacing="20.0"
+              BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="logoImageView" fitHeight="223.0" fitWidth="205.0" opacity="0.25" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/home_image.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </ImageView>
+                <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.3" text="Easy Note" textAlignment="CENTER"
+                       textFill="#0099cc">
+                    <font>
+                        <Font name="SansSerif Regular" size="50.0"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>

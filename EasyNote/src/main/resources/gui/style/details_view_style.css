@@ -1,0 +1,69 @@
+
+.add-button {
+    -fx-background-color: #00C851;
+    -fx-text-fill: white;
+}
+
+.remove-button {
+    -fx-background-color: #ff4444;
+    -fx-text-fill: white;
+}
+
+.add-tag-to-note-button{
+    -fx-background-color: transparent;
+}
+
+.view-background {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0099CC;
+}
+
+.list-cell {
+    -fx-background-color: white;
+
+}
+
+.list-cell:filled:selected:focused {
+    -fx-background-color: #33b5e5;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-text-fill: #0099CC;
+}
+
+
+.list-cell .scroll-bar:horizontal .track,
+.list-cell .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+
+.list-cell .scroll-bar:horizontal .increment-button,
+.list-cell .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+.list-cell .scroll-bar:vertical .increment-button,
+.list-cell .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+
+.list-cell .scroll-bar .increment-arrow,
+.list-cell .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.list-cell .scroll-bar:horizontal .thumb,
+.list-cell .scroll-bar:vertical .thumb {
+    -fx-background-color: grey;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}

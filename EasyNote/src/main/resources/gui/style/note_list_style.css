@@ -1,0 +1,49 @@
+
+.list-cell {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:selected:focused {
+    -fx-background-color: #33b5e5;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-text-fill: #0099CC;
+}
+
+
+.note-list {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.note-list .scroll-bar:horizontal .track,
+.note-list .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+.note-list .scroll-bar:horizontal .increment-button,
+.note-list .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+.note-list .scroll-bar:vertical .increment-button,
+.note-list .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+.note-list .scroll-bar .increment-arrow,
+.note-list .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+.note-list .scroll-bar:horizontal .thumb,
+.note-list .scroll-bar:vertical .thumb {
+    -fx-background-color: grey;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}

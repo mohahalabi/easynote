@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXChipView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootVBox" alignment="CENTER" prefHeight="650.0" spacing="2.0" styleClass="background-color"
+      stylesheets="@../style/note_view_style.css" xmlns="http://javafx.com/javafx/10.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ch.supsi.info.gruppo9.javafx.javafxcontrollers.JFXNoteController">
+    <children>
+      <HBox alignment="CENTER_LEFT" prefWidth="800.0" spacing="10.0">
+         <children>
+            <Button fx:id="saveBtn" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveNote" prefHeight="30.0" prefWidth="30.0" styleClass="save-button" stylesheets="@../style/note_view_style.css">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Save opened note">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/save_note.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="deleteBtn" accessibleRole="BUTTON" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteNote" prefHeight="30.0" prefWidth="30.0" styleClass="delete-button" stylesheets="@../style/note_view_style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Delete opened note">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/delete_note.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="5.0" left="2.0" right="2.0" top="5.0" />
+               </padding></Button>
+            <Region maxHeight="-Infinity" prefHeight="35.0" prefWidth="621.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="infoBtn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="info-button" stylesheets="@../style/note_view_style.css" textAlignment="CENTER">
+               <tooltip>
+                  <Tooltip fx:id="infoToolTip" anchorLocation="CONTENT_TOP_RIGHT" autoHide="true" contentDisplay="CENTER" textAlignment="CENTER">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/info_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="1.0" />
+               </font></Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Separator layoutX="17.0" layoutY="536.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </Separator>
+        <TextArea fx:id="noteTextArea" onKeyTyped="#noteTextChanged" prefHeight="458.0" prefWidth="800.0"
+                  promptText="Note's content" stylesheets="@../style/note_view_style.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextArea>
+      <Separator prefWidth="200.0" valignment="BOTTOM">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </Separator>
+      <JFXChipView fx:id="tagsChipView" prefHeight="133.0" prefWidth="800.0" styleClass="tag-area" stylesheets="@../style/note_view_style.css" VBox.vgrow="ALWAYS" />
+    </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</VBox>

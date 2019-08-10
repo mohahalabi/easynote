@@ -1,0 +1,127 @@
+
+.background-color {
+    -fx-background-color: white;
+}
+
+.save-button{
+    -fx-background-color: transparent;
+}
+
+.delete-button{
+    -fx-background-color: transparent;
+}
+
+.info-button{
+    -fx-background-color: transparent;
+
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-text-fill: #2E2E2E;
+
+}
+
+
+.text-area .scroll-bar:horizontal .track,
+.text-area .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+
+.text-area .scroll-bar:horizontal .increment-button,
+.text-area .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+.text-area .scroll-bar:vertical .increment-button,
+.text-area .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+
+.text-area .scroll-bar .increment-arrow,
+.text-area .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.text-area .scroll-bar:horizontal .thumb,
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: grey;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+.tag-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2E2E2E;
+}
+
+.tag-area .chips-pane {
+    -fx-background-color: TRANSPARENT;
+    -fx-padding: 0.333333em;
+    -fx-vgap: 4;
+    -fx-hgap: 6;
+}
+
+.tag-area .chips-pane > .text-area,
+.tag-area .chips-pane > .text-area .scroll-pane,
+.tag-area .chips-pane > .text-area .scroll-pane > .viewport,
+.tag-area .chips-pane > .text-area:focused,
+.tag-area .chips-pane > .text-area:focused .scroll-pane {
+    -fx-background-color: TRANSPARENT, TRANSPARENT, TRANSPARENT, TRANSPARENT;
+}
+
+.tag-area .chips-pane > .text-area {
+    -fx-padding: 0.333333em;
+    -fx-min-width: 100px;
+    /*-fx-pref-height: 42;*/
+
+}
+
+.tag-area .chips-pane > .text-area .content,
+.tag-area .chips-pane > .text-area:focused .content {
+    -fx-background-color: TRANSPARENT, TRANSPARENT, TRANSPARENT, TRANSPARENT;
+    -fx-padding: 0;
+}
+
+.tag-area .jfx-chip > HBox {
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 12.0;
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 40px;
+    -fx-padding: 5px 8px 5px 12px;
+    -fx-pref-height: 20px;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+}
+

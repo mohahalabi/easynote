@@ -1,0 +1,18 @@
+.transparent-button {
+    -fx-background-color: transparent;
+
+}
+
+.main-background {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+}
+
+.search {
+    -fx-prompt-text-fill: grey;
+    -fx-text-fill: #4B515D;
+    -fx-background-color: transparent;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 5;
+    -fx-border-width: 1px;
+}

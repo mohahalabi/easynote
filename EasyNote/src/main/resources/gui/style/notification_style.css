@@ -1,0 +1,5 @@
+.label {
+    -fx-border-radius: 20px;
+    -fx-border-width: 0.10em;
+    -fx-padding: 4 15 4 15;
+}

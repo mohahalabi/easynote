@@ -1,0 +1,46 @@
+.main-background {
+    -fx-background-color: white;
+}
+
+.confirm-button {
+    -fx-background-color: #00C851;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+}
+
+.cancel-button {
+    -fx-background-color: #ff4444;
+    -fx-background-radius: 4;
+    -fx-text-fill: white;
+}
+
+.add-button {
+    -fx-background-color: #0099CC;
+    -fx-text-fill: white;
+}
+
+.group-tag-name {
+    -fx-prompt-text-fill: grey;
+    -fx-text-fill: #4B515D;
+    -fx-background-color: transparent;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 5;
+    -fx-border-width: 1px;
+}
+
+.tag-area {
+    -fx-border-width: 1px;
+    -fx-border-color: #CCCCCC;
+}
+
+.tag-area .jfx-chip > HBox {
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 11.0;
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 40px;
+    -fx-padding: 5px 5px 5px 8px;
+    -fx-pref-height: 20px;
+    -fx-alignment: center;
+    -fx-spacing: 4;
+}
+
